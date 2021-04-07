@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    //DateFormatter Class 상속 받은 클래스 생성
+    //dateFormat : 자료형이 DateFormatter인 인스턴스 생성 및 초기화
     static let dateFormat: DateFormatter = {
         let formatter = DateFormatter() //인스턴스 생성 및 초기화
         formatter.dateFormat = "Y년 M월 d일" //Y,M,d,D 값을 문자열에서 읽어내는데 어디서 읽어내는지 모르겠음. dateFormat : !String
+//        print("formatter.dateFormat= \(formatter.dateFormat ?? "Error")")
         return formatter
     }()
     
