@@ -28,10 +28,10 @@ struct ContentView: View {
                 ScrollView{
                     VStack{
                         MyProjectCard()
-                        MyBasicCard()
-                        MyBasicCard()
-                        MyBasicCard()
-                        MyBasicCard()
+                        MyBasicCard() //커스텀으로 뷰를 만들기 어려움 -> 매개변수 활용하려함
+                        MyCard(icon: "tray.fill", title: "책상 정리하기", start: "10 AM", end: "11 AM", bgColor: Color.blue)
+                        MyCard(icon: "tv", title: "강의 보기", start: "8 AM", end: "9 AM", bgColor: Color.orange)
+                        MyCard(icon: "play.rectangle", title: "유튜브", start: "12 PM", end: "2 PM", bgColor: Color.red)
                     }.padding()
                 }
             }

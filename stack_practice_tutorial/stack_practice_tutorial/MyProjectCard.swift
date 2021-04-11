@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct MyProjectCard: View{
+    
+    @State var shouldShowAlert: Bool = false
+    
     var body: some View{
+        
         VStack(alignment: .leading, spacing:0){
             Rectangle().frame(height: 0) //원을 왼쪽에 두기 위함
             Text("박근우 클론 프로젝트")
@@ -40,15 +44,28 @@ struct MyProjectCard: View{
                 
                 Spacer()
                 
-                Text("확인")
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 80)
-                    .background(Color.blue)
-                    .cornerRadius(20)
-                    .frame(width: 20)
-                    .padding(.trailing, 15)
+                //
+                Button(action: {
+                    print("확인 버튼이 클릭되었다.")
+                    
+                    self.shouldShowAlert = true
+                    
+                }){
+                    Text("확인")
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 80)
+                        .background(Color.blue)
+                        .cornerRadius(20)
+                        .frame(width: 20)
+                        .padding(.trailing, 15)
+                }.alert(isPresented: $shouldShowAlert){
+                    Alert(title: Text("알림창입니다."))
+                }
+                
+                
+                
             }
         }
         .padding(30)
