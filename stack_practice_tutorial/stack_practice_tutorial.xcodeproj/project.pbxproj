@@ -16,6 +16,7 @@
 		AE3D074A2620A5E900838F3F /* MyProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D07492620A5E900838F3F /* MyProjectCard.swift */; };
 		AE3D074D2621CC5400838F3F /* MyBasicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D074C2621CC5400838F3F /* MyBasicCard.swift */; };
 		AE3D07502622864700838F3F /* MyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D074F2622864700838F3F /* MyCard.swift */; };
+		AE3D075326228FB200838F3F /* Mylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D075226228FB200838F3F /* Mylist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AE3D07492620A5E900838F3F /* MyProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectCard.swift; sourceTree = "<group>"; };
 		AE3D074C2621CC5400838F3F /* MyBasicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBasicCard.swift; sourceTree = "<group>"; };
 		AE3D074F2622864700838F3F /* MyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCard.swift; sourceTree = "<group>"; };
+		AE3D075226228FB200838F3F /* Mylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mylist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				AE3D07492620A5E900838F3F /* MyProjectCard.swift */,
 				AE3D074C2621CC5400838F3F /* MyBasicCard.swift */,
 				AE3D074F2622864700838F3F /* MyCard.swift */,
+				AE3D075226228FB200838F3F /* Mylist.swift */,
 			);
 			path = stack_practice_tutorial;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				AE3D074D2621CC5400838F3F /* MyBasicCard.swift in Sources */,
 				AE3D074A2620A5E900838F3F /* MyProjectCard.swift in Sources */,
 				AE3D07372620A5A500838F3F /* SceneDelegate.swift in Sources */,
+				AE3D075326228FB200838F3F /* Mylist.swift in Sources */,
 				AE3D07392620A5A500838F3F /* ContentView.swift in Sources */,
 				AE3D07502622864700838F3F /* MyCard.swift in Sources */,
 			);
