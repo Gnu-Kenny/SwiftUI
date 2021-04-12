@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct Mylist:View {
+    //state 값을 받아옴, 렌더링 될때마다 변경된 값 확인
     @Binding var isNavigationBarHidden: Bool
     //인자 역할: Mylist 인스턴스 생성할때 매개 변수를 넣겠다.
-    init(isNavigationBarHidden: Binding<Bool> = .constant(false)){
+    init(isNavigationBarHidden: Binding<Bool> = .constant(false)){ // Binding.constant
         if #available(iOS 14.0, *){
             
         } else {
-            UITableView.appearance().tableFooterView = UIView() // ? 기본값을 없앤다는데 뭔말
+            UITableView.appearance().tableFooterView = UIView() //
         }
         UITableView.appearance().separatorStyle = .none // 회색줄(separator 지움)
         

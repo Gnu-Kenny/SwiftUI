@@ -62,7 +62,7 @@ struct ContentView: View {
             }// ZStack
             .navigationBarTitle("메인")
             .navigationBarHidden(self.isNavigationBarHidden)
-            .onAppear{
+            .onAppear{ //뷰에 표시가 되면 
                 self.isNavigationBarHidden = true
             }
         } // NavigationView
