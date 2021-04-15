@@ -8,74 +8,86 @@
 import SwiftUI
 
 struct MyProfile:View{
-    var body: some View{
-        NavigationView{
-//            NavigationLink(
-//                destination: Text("넘겨진 화면입니다")){
-//                Image(systemName: "gear")
-//                    .font(.largeTitle)
-//                    .foregroundColor(Color.black)
-//            }.frame(maxWidth: .infinity, alignment: .trailing)
-            ScrollView{
-                    
-                        VStack{
-                            
-                            Image("Profile")
-                                .resizable()
-                                .frame(width: 200, height: 200)
-                                .clipShape(Circle())
-                                .shadow(color:Color.gray,radius: 15, x:5,y:5)
-                                .overlay(
-                                    Circle()
-                                        .stroke(Color.purple, lineWidth: 10)
-                                )
-                                .padding()
-                            
-                            Text("Gnu-Kenny")
-                                .font(.system(size: 40))
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                .padding(3)
-                            
-                            Text("Click the below button!")
-                                .font(.system(size:25))
-                                .fontWeight(.bold)
-                                .padding(.bottom, 20)
-                            
-                            HStack(spacing: 30){
-                                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                    Text("Github")
-                                        .font(.system(size: 30))
-                                        .foregroundColor(.white)
-                                        .fontWeight(.heavy)
-                                        .padding(10)
-                                        .background(Color.black)
-                                        .cornerRadius(15)
-                                        .shadow(color:Color.gray,radius: 15, x:5,y:5)
-                                })
-                                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                    Text("Velog")
-                                        .font(.system(size: 30))
-                                        .foregroundColor(.white)
-                                        .fontWeight(.heavy)
-                                        .padding(10)
-                                        .padding(.horizontal,10)
-                                        .background(Color.green)
-                                        .cornerRadius(15)
-                                        .shadow(color:Color.gray,radius: 15, x:5,y:5)
-                                })
-                                
-                            }
-                            .navigationBarTitle("My Profile")
-                            
-                            //.navigationTitle("My Profile")
-                            //
-                         
-                            
-                        } // VStack
-                }
-            
-        }
+    
+    @Binding var isNavigationBarHidden: Bool
+    //인자 역할: Mylist 인스턴스 생성할때 매개 변수를 넣겠다.
+    init(isNavigationBarHidden: Binding<Bool> = .constant(false)){ // Binding.constant
         
+        //바인딩에 관한 것
+        _isNavigationBarHidden = isNavigationBarHidden
+    }
+    
+    //이전 화면에서 네비게이션뷰를 통해 넘어 온다. => 이미 네비게이션뷰로 감싸져있다.
+    var body: some View{
+            ScrollView{
+                        
+                VStack{
+                    
+                    MyCircleImageView(imageString: "Profile")
+                        .padding(.vertical, 20)
+                    
+                    Text("Gnu-Kenny")
+                        .font(.system(size: 40))
+                        .fontWeight(.bold)
+                        .padding(3)
+                    
+                    Text("Click the below button!")
+                        .font(.system(size:25))
+                        .fontWeight(.bold)
+                        .padding(.bottom, 20)
+                    
+                    HStack(spacing: 30){
+                        NavigationLink(
+                            destination: MyWebview(urlToLoad:"https://github.com/Gnu-Kenny")
+                                .edgesIgnoringSafeArea(.all)
+                        ){
+                            Text("Github")
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .fontWeight(.heavy)
+                                .padding(10)
+                                .background(Color.black)
+                                .cornerRadius(15)
+                                .shadow(color:Color.gray,radius: 15, x:5,y:5)
+                        }
+                        NavigationLink(
+                            destination: MyWebview(urlToLoad:"https://velog.io/@qkr0677")
+                                .edgesIgnoringSafeArea(.all)
+                        ){
+                            Text("Velog")
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .fontWeight(.heavy)
+                                .padding(10)
+                                .padding(.horizontal,10)
+                                .background(Color.green)
+                                .cornerRadius(15)
+                                .shadow(color:Color.gray,radius: 15, x:5,y:5)
+                        }
+                        
+                    } // HStack
+                    .frame(maxWidth: .infinity)
+                    
+                } // VStack
+             
+            } //scrollView
+            .navigationTitle("My Profile")
+            .navigationBarItems(trailing:
+                NavigationLink(destination:
+                                Text("설정 화면입니다.")
+                                .font(.largeTitle)
+                                .fontWeight(.black)
+                ){
+                    Image(systemName: "gear")
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                }
+            )
+            .onAppear{
+                self.isNavigationBarHidden = false
+            }
+            
+      
         
     }
 }
