@@ -27,8 +27,13 @@ struct ContentView: View {
                         }
                         
                         Spacer()
-                        Image(systemName: "person.crop.circle.fill")
-                            .font(.largeTitle)
+                        NavigationLink(
+                            destination: MyProfile(isNavigationBarHidden: self.$isNavigationBarHidden)){
+                            Image(systemName: "person.crop.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(Color.black)
+                        }
+                        
                     }
                     .padding(20)
                     Text("박근우 할 일 목록")
