@@ -18,7 +18,7 @@ struct MyView:View{
                 .font(.largeTitle)
                 .fontWeight(.black)
                 .foregroundColor(.white)
-        }
+        }.animation(.none)
     }
 }
 
