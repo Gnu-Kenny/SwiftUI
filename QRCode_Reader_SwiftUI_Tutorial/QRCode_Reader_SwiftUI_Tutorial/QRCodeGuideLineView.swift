@@ -13,7 +13,8 @@ struct QRCodeGuideLineView:View {
                 .stroke(style: StrokeStyle(lineWidth: 10, dash: [11]))
                 .frame(width: geometryProxy.size.width / 2, height: geometryProxy.size.height / 3)
                 .foregroundColor(.yellow)
-                .offset(x:geometryProxy.size.width / 4, y:geometryProxy.size.height / 3)
+                .position(x: geometryProxy.size.width / 2, y: geometryProxy.size.height / 2)
+//                .offset(x:geometryProxy.size.width / 4, y:geometryProxy.size.height / 3)
         }
     }
 }
