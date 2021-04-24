@@ -19,6 +19,13 @@
 		AE3D075326228FB200838F3F /* Mylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D075226228FB200838F3F /* Mylist.swift */; };
 		AE3D07562624048600838F3F /* MyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D07552624048600838F3F /* MyNavigationView.swift */; };
 		AE3D075926241ADC00838F3F /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D075826241ADC00838F3F /* MyProfile.swift */; };
+		AEB24484262971FA00697A87 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB24483262971FA00697A87 /* MyTabView.swift */; };
+		AEB244872629759900697A87 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB244862629759900697A87 /* MyView.swift */; };
+		AEB2448E262AFD1F00697A87 /* MyCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB2448D262AFD1F00697A87 /* MyCustomTabView.swift */; };
+		AEBF342D2627DBA60078C413 /* MyWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF342C2627DBA60078C413 /* MyWebview.swift */; };
+		AEDF007826284FF300D3295B /* MyCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF007726284FF300D3295B /* MyCircleImageView.swift */; };
+		AEDF007B2628694300D3295B /* MyGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF007A2628694300D3295B /* MyGeometryReader.swift */; };
+		AEDF007E2628844100D3295B /* MyGeometryReaderVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF007D2628844100D3295B /* MyGeometryReaderVStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		AE3D075226228FB200838F3F /* Mylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mylist.swift; sourceTree = "<group>"; };
 		AE3D07552624048600838F3F /* MyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationView.swift; sourceTree = "<group>"; };
 		AE3D075826241ADC00838F3F /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
+		AEB24483262971FA00697A87 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
+		AEB244862629759900697A87 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		AEB2448D262AFD1F00697A87 /* MyCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomTabView.swift; sourceTree = "<group>"; };
+		AEBF342C2627DBA60078C413 /* MyWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebview.swift; sourceTree = "<group>"; };
+		AEDF007726284FF300D3295B /* MyCircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleImageView.swift; sourceTree = "<group>"; };
+		AEDF007A2628694300D3295B /* MyGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGeometryReader.swift; sourceTree = "<group>"; };
+		AEDF007D2628844100D3295B /* MyGeometryReaderVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGeometryReaderVStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 				AE3D07322620A5A500838F3F /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		AE3D07322620A5A500838F3F /* Products */ = {
 			isa = PBXGroup;
@@ -81,6 +96,13 @@
 				AE3D075226228FB200838F3F /* Mylist.swift */,
 				AE3D07552624048600838F3F /* MyNavigationView.swift */,
 				AE3D075826241ADC00838F3F /* MyProfile.swift */,
+				AEB2448D262AFD1F00697A87 /* MyCustomTabView.swift */,
+				AEB24483262971FA00697A87 /* MyTabView.swift */,
+				AEB244862629759900697A87 /* MyView.swift */,
+				AEDF007726284FF300D3295B /* MyCircleImageView.swift */,
+				AEDF007A2628694300D3295B /* MyGeometryReader.swift */,
+				AEDF007D2628844100D3295B /* MyGeometryReaderVStack.swift */,
+				AEBF342C2627DBA60078C413 /* MyWebview.swift */,
 			);
 			path = stack_practice_tutorial;
 			sourceTree = "<group>";
@@ -164,14 +186,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3D07352620A5A500838F3F /* AppDelegate.swift in Sources */,
+				AEDF007E2628844100D3295B /* MyGeometryReaderVStack.swift in Sources */,
 				AE3D075926241ADC00838F3F /* MyProfile.swift in Sources */,
+				AEB2448E262AFD1F00697A87 /* MyCustomTabView.swift in Sources */,
 				AE3D074D2621CC5400838F3F /* MyBasicCard.swift in Sources */,
 				AE3D07562624048600838F3F /* MyNavigationView.swift in Sources */,
 				AE3D074A2620A5E900838F3F /* MyProjectCard.swift in Sources */,
+				AEB24484262971FA00697A87 /* MyTabView.swift in Sources */,
 				AE3D07372620A5A500838F3F /* SceneDelegate.swift in Sources */,
+				AEDF007B2628694300D3295B /* MyGeometryReader.swift in Sources */,
 				AE3D075326228FB200838F3F /* Mylist.swift in Sources */,
+				AEDF007826284FF300D3295B /* MyCircleImageView.swift in Sources */,
 				AE3D07392620A5A500838F3F /* ContentView.swift in Sources */,
+				AEB244872629759900697A87 /* MyView.swift in Sources */,
 				AE3D07502622864700838F3F /* MyCard.swift in Sources */,
+				AEBF342D2627DBA60078C413 /* MyWebview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
