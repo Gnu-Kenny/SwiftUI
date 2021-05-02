@@ -14,6 +14,9 @@
 		AEE06B6A263E7C0E00C1FCE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE06B69263E7C0E00C1FCE1 /* Preview Assets.xcassets */; };
 		AEE06B6D263E7C0E00C1FCE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE06B6B263E7C0E00C1FCE1 /* LaunchScreen.storyboard */; };
 		AEE06B76263E7E7700C1FCE1 /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE06B75263E7E7700C1FCE1 /* MyButtonStyle.swift */; };
+		AEE06B79263EA07300C1FCE1 /* MyRotateButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE06B78263EA07300C1FCE1 /* MyRotateButtonStyle.swift */; };
+		AEE06B7C263EA22A00C1FCE1 /* MySmallerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE06B7B263EA22A00C1FCE1 /* MySmallerButton.swift */; };
+		AEE06B80263EA33B00C1FCE1 /* MyBlurButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE06B7F263EA33B00C1FCE1 /* MyBlurButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		AEE06B6C263E7C0E00C1FCE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE06B6E263E7C0E00C1FCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEE06B75263E7E7700C1FCE1 /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
+		AEE06B78263EA07300C1FCE1 /* MyRotateButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRotateButtonStyle.swift; sourceTree = "<group>"; };
+		AEE06B7B263EA22A00C1FCE1 /* MySmallerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySmallerButton.swift; sourceTree = "<group>"; };
+		AEE06B7F263EA33B00C1FCE1 /* MyBlurButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlurButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				AEE06B62263E7C0E00C1FCE1 /* SceneDelegate.swift */,
 				AEE06B64263E7C0E00C1FCE1 /* ContentView.swift */,
 				AEE06B75263E7E7700C1FCE1 /* MyButtonStyle.swift */,
+				AEE06B7B263EA22A00C1FCE1 /* MySmallerButton.swift */,
+				AEE06B78263EA07300C1FCE1 /* MyRotateButtonStyle.swift */,
+				AEE06B7F263EA33B00C1FCE1 /* MyBlurButtonStyle.swift */,
 				AEE06B66263E7C0E00C1FCE1 /* Assets.xcassets */,
 				AEE06B6B263E7C0E00C1FCE1 /* LaunchScreen.storyboard */,
 				AEE06B6E263E7C0E00C1FCE1 /* Info.plist */,
@@ -148,10 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE06B7C263EA22A00C1FCE1 /* MySmallerButton.swift in Sources */,
 				AEE06B61263E7C0E00C1FCE1 /* AppDelegate.swift in Sources */,
 				AEE06B76263E7E7700C1FCE1 /* MyButtonStyle.swift in Sources */,
+				AEE06B80263EA33B00C1FCE1 /* MyBlurButtonStyle.swift in Sources */,
 				AEE06B63263E7C0E00C1FCE1 /* SceneDelegate.swift in Sources */,
 				AEE06B65263E7C0E00C1FCE1 /* ContentView.swift in Sources */,
+				AEE06B79263EA07300C1FCE1 /* MyRotateButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
