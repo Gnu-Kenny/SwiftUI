@@ -18,7 +18,7 @@ struct ContentView: View {
             }, label: {
                 Text("탭")
                     .fontWeight(.bold)
-            }).buttonStyle(MyButtonStyle())
+            }).buttonStyle(MyButtonStyle(color: Color.blue, type: .tab))
             
             Button(
                 action: {
@@ -29,7 +29,7 @@ struct ContentView: View {
                 Text("롱클릭")
                     .fontWeight(.bold)
                     
-            }).buttonStyle(MyLongButtonStyle())
+            }).buttonStyle(MyButtonStyle(color: Color.green, type: .long))
                         
             Button(
                 action: {
@@ -37,7 +37,7 @@ struct ContentView: View {
             }, label: {
                 Text("축소 버튼")
                     .fontWeight(.bold)
-            }).buttonStyle(MyMinButtonStyle())
+            }).buttonStyle(MySmallerButtonStyle(color: Color.purple))
             
             Button(
                 action: {
@@ -45,7 +45,7 @@ struct ContentView: View {
             }, label: {
                 Text("회전 버튼")
                     .fontWeight(.bold)
-            }).buttonStyle(MyRotateButtonStyle())
+            }).buttonStyle(MyRotateButtonStyle(color: Color.pink))
             
             Button(
                 action: {
@@ -53,7 +53,7 @@ struct ContentView: View {
             }, label: {
                 Text("블러 버튼")
                     .fontWeight(.bold)
-            }).buttonStyle(MyBlurButtonStyle())
+            }).buttonStyle(MyBlurButtonStyle(color: .black))
             
             
         }
