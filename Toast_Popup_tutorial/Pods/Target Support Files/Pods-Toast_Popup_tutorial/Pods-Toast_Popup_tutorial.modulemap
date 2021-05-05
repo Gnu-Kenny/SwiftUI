@@ -1,0 +1,6 @@
+framework module Pods_Toast_Popup_tutorial {
+  umbrella header "Pods-Toast_Popup_tutorial-umbrella.h"
+
+  export *
+  module * { export * }
+}
