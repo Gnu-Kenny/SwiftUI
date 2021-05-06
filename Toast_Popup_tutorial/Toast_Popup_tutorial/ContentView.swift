@@ -17,7 +17,6 @@ struct ContentView: View {
     @State var fourthButtonPopup = false
     @State var fifthButtonPopup = false
     var body: some View {
-        GeometryReader{ GeometryProxy in
             ZStack{
                 VStack(spacing:20) {
                             // your view
@@ -34,22 +33,25 @@ struct ContentView: View {
                     })
                     .popup(isPresented: $firstButtonPopup, type: .floater(verticalPadding: 0),autohideIn: 2) {
                         
-                            HStack(spacing:5) {
+                            HStack(spacing:10) {
                                 Image(systemName: "pencil.circle.fill")
                                     .font(.system(size: 35))
+                                    .padding(5)
                                 VStack(alignment: .leading, spacing: 0){
                                     Text("안내 메세지")
                                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                     Text("안녕하세요 오늘도 빡코딩 하고 계신가요?")
                                     Text("이번시간에는 팝업에 대해 알아보도록 하겠습니다!")
-                                    Text("asdfasdfasdf")                        }
+                                    Text("asdfasdfasdf")
+                                    Divider().opacity(0)    //divider : HStack 요소들 분배 opacity : 중간 선 지움
+                                }
                                 .font(.system(size:12))
                             }
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 15)
                             .background(Color.purple)
-                            
+                            .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 0 : 15) // 아이폰 se라면(구버전이라면)
                     } //popup
                     
                     //second button
@@ -64,17 +66,20 @@ struct ContentView: View {
                     })
                     .popup(isPresented: $secondButtonPopup, type: .toast,autohideIn: 2) {
                         
-                        HStack(alignment:.center,spacing:10) {
+                        HStack(alignment:.top,spacing:10) {
                                 Image("cat")
                                     .resizable()
+                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/) //이후에 잘리는 부분은 offset으로 이동가능
                                     .frame(width: 60, height: 60)
                                     .cornerRadius(10)
+                                    .padding(5)
                                 VStack(alignment: .leading, spacing: 0){
                                     Text("우리집 고영희씨")
                                         .font(.system(size:15))
                                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                     Text("Her name is goyoungHee you want a view to go under the safe area, amke sure you add the .edgesIgnoringSafeArea(.all) modifier")
                                         .font(.system(size:12))
+                                    Divider().opacity(0)    //divider : HStack 요소들 분배 opacity : 중간 선 지움
                                     
                                         
                                 }
@@ -106,16 +111,16 @@ struct ContentView: View {
                                     .frame(width:60, height:60)
                                     .clipShape(Circle())
                                     .font(.system(size: 35))
+                                    .padding(5)
                                 VStack(alignment: .leading, spacing: 0){
                                     Text("개발하는 정대리님의 메세지")
                                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                         .font(.system(size:15))
-                                    Text("안녕하세요 오늘도 빡코딩 하고 계신가요?")
-                                    Text("이번시간에는 팝업에 대해 알아보도록 하겠습니다!")
-                                    Text("asdfasdfasdf")
-                                        
+                                    Text("안녕하세요 오늘도 빡코딩 하고 계신가요? \n이번시간에는 팝업에 대해 알아보도록 하겠습니다! \n asdfasdfasdf")
+                                    Divider().opacity(0)    //divider : HStack 요소들 분배 opacity : 중간 선 지움
                                 }
                                 .font(.system(size:12))
+                            
                             }
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
@@ -154,7 +159,7 @@ struct ContentView: View {
                         .padding(.all,17)
                         .background(Color.orange)
                         .cornerRadius(50)
-                        .padding(.top, 40)
+                        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 0 : 40)
                         
                             
                     } //popup
@@ -163,10 +168,10 @@ struct ContentView: View {
                     Button(action: {
                         fifthButtonPopup = true
                     }, label: {
-                        Text("BottomToastMessage")
+                        Text("Pop Up")
                             .padding()
                             .foregroundColor(Color.white)
-                            .background(Color.black)
+                            .background(Color(hexcode: "8227b0"))
                             .cornerRadius(10)
                     })
                     .popup(isPresented: $fifthButtonPopup, type: .toast, position: .bottom,autohideIn: 200) {
@@ -196,20 +201,20 @@ struct ContentView: View {
                         }
                         .foregroundColor(.white)
                         .padding(50)
-                        .background(Color.yellow)
+                        .background(Color(hexcode: "8227b0"))
                         .cornerRadius(15)
-                        .padding(.bottom,GeometryProxy.size.height/2-140)
+                        .padding(.bottom,270)
                         
                             
                     } //popup
                     
                     
                 } //vstack
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .position(x:GeometryProxy.size.width/2,y: GeometryProxy.size.height/2)
-            }
+                
+            }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-        }
+            
+        
         
         
     }
