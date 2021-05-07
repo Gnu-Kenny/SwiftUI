@@ -9,13 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectionValue = 0
-    var selectedColor :[Color] = [.red,.green,.blue]
-    var selectedColorName : [String] = ["레드","그린","블루"]
+    let selectedColorName : [String] = ["레드","그린","블루"]
+    func changeColor(index:Int) -> Color {
+        switch index {
+        case 0:
+            return Color.red
+        case 1:
+            return Color.green
+        case 2:
+            return Color.blue
+        default:
+            return Color.red
+        }
+    }
     var body: some View {
         VStack{
             Circle()
                 .frame(width:50,height:50)
-                .foregroundColor(selectedColor[selectionValue])
+                .foregroundColor(self.changeColor(index: selectionValue))
                 .font(.system(size:40))
             Text("세그먼트 value : \(selectionValue)")
             Text("선택된 색깔: \(selectedColorName[selectionValue])")
@@ -31,7 +42,8 @@ struct ContentView: View {
                     Text("블루").tag(2)
                 })
                 .frame(width: 80, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .border(selectedColor[selectionValue], width: 10)
+                .clipped()
+                .border(self.changeColor(index: selectionValue), width: 10)
             }
             
         }
