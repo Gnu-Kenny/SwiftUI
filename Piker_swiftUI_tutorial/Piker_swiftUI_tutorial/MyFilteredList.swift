@@ -17,7 +17,6 @@ struct MyFiteredListView: View {
                     .font(.system(size:25))
                 Text("언제 동창?")
                     .font(.system(size:25))
-                picker()
                 Spacer()
             }
             
