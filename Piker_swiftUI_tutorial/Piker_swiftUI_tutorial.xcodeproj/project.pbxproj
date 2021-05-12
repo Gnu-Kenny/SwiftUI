@@ -13,6 +13,7 @@
 		AE37EFCA2643C15900FBB3C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE37EFC92643C15900FBB3C5 /* Assets.xcassets */; };
 		AE37EFCD2643C15900FBB3C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE37EFCC2643C15900FBB3C5 /* Preview Assets.xcassets */; };
 		AE37EFD02643C15900FBB3C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE37EFCE2643C15900FBB3C5 /* LaunchScreen.storyboard */; };
+		AEAC462D26462CFF0054E75A /* MyFilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC462C26462CFF0054E75A /* MyFilteredList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AE37EFCC2643C15900FBB3C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE37EFCF2643C15900FBB3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE37EFD12643C15900FBB3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEAC462C26462CFF0054E75A /* MyFilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilteredList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AE37EFC32643C15800FBB3C5 /* AppDelegate.swift */,
 				AE37EFC52643C15800FBB3C5 /* SceneDelegate.swift */,
 				AE37EFC72643C15800FBB3C5 /* ContentView.swift */,
+				AEAC462C26462CFF0054E75A /* MyFilteredList.swift */,
 				AE37EFC92643C15900FBB3C5 /* Assets.xcassets */,
 				AE37EFCE2643C15900FBB3C5 /* LaunchScreen.storyboard */,
 				AE37EFD12643C15900FBB3C5 /* Info.plist */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAC462D26462CFF0054E75A /* MyFilteredList.swift in Sources */,
 				AE37EFC42643C15800FBB3C5 /* AppDelegate.swift in Sources */,
 				AE37EFC62643C15800FBB3C5 /* SceneDelegate.swift in Sources */,
 				AE37EFC82643C15800FBB3C5 /* ContentView.swift in Sources */,
